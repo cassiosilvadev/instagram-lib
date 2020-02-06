@@ -5,11 +5,11 @@ const fetch = require('node-fetch')
 module.exports = class Instagram {
    
    getUser(userName) {
-        return this.request(userName).then(res => res)
+        return this.request(userName)
     }
 
    getStories(userName) {
-        return this.request(`stories/${userName}`).then(res => res)
+        return this.request(`stories/${userName}`)
     }
 
    request(endPoint) {
