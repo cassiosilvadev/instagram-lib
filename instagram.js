@@ -4,15 +4,15 @@ const fetch = require('node-fetch')
 
 module.exports = class Instagram {
    
-   getUser(userName) {
+   static getUser(userName) {
         return this.request(userName)
     }
 
-   getStories(userName) {
+   static getStories(userName) {
         return this.request(`stories/${userName}`)
     }
 
-   request(endPoint) {
+   static request(endPoint) {
         return fetch(`${URL}/${endPoint}/?__a=1`)
             .then(res => res.json())
     }
