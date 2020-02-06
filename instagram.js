@@ -1,4 +1,4 @@
-const API_URL = 'https://www.instagram.com/'
+const URL = 'https://www.instagram.com'
 
 const fetch = require('node-fetch')
 
@@ -13,7 +13,7 @@ module.exports = class Instagram {
     }
 
    request(endPoint) {
-        return fetch(`${API_URL}${endPoint}/?__a=1`)
+        return fetch(`${URL}/${endPoint}/?__a=1`)
             .then(res => res.json())
     }
   }
